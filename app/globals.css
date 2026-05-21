@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-fondo: #FFF8E1;
+  --color-texto: #1A1A1A;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* TDAH-friendly: foco visible muy claro */
+*:focus-visible {
+  outline: 4px solid #FFC72C;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Scrollbar visible */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF8E1;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8102E;
+  border-radius: 7px;
+  border: 2px solid #FFF8E1;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A00C25;
+}
+
+/* Selección de texto */
+::selection {
+  background: #FFC72C;
+  color: #1A1A1A;
+}
+
+/* Animación fondo gradiente */
+.bg-gradient-animado {
+  background: linear-gradient(-45deg, #C8102E, #6A1B9A, #1565C0, #2E7D32);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+}
+
+/* Tarjeta hover lift */
+.lift {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Subrayado decorativo */
+.subraya {
+  background: linear-gradient(180deg, transparent 60%, #FFC72C 60%);
+  padding: 0 0.1em;
+}
