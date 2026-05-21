@@ -1,22 +1,34 @@
 # CHANGELOG — RUBEN-JIMENEZ_FORMACION-WEB
 
-## [0.1.0] · 2026-05-21
+## [0.2.0] · 2026-05-21
+
+### Desplegado en producción ✅
+
+- App live en VPS Hostinger (187.77.166.84) via Coolify
+- Deploy key SSH configurada (repo sigue privado)
+- Container running, HTML servido correctamente
+- Pendiente solo DNS Squarespace: A record `cursos -> 187.77.166.84`
 
 ### Añadido
 
-- Scaffold inicial: Next.js 15 + TypeScript + Tailwind + Framer Motion + Dockerfile standalone.
-- 12 componentes reutilizables (Quiz, Flashcard, Acordeon, Caja, ZonaImagen, OrdenarPasos, BarraProgreso, Hero, TarjetaCurso, BarraSuperior, PieDePagina, CajaModulo).
-- Catálogo de 8 cursos (`lib/cursos.ts`).
-- Curso Revit + BIM completo: 12 módulos (2 dedicados con contenido visual + 10 dinámicos data-driven).
-- Página `/jugar` con concurso general de 8 preguntas mezcladas de los 7 cursos.
-- Generador de placeholders PIL: `scripts/generate_placeholders.py`.
-- Build standalone validado (19 páginas, 102 kB JS shared).
-- Documentación: README.md, CLAUDE.md, SESSION-HANDOFF.md, plans.md.
-- Repo GitHub privado `rubencoton/RUBEN-JIMENEZ_FORMACION-WEB` + push inicial.
-- Proyecto y aplicación creados en Coolify con dominio `cursos.rubenjimenezgonzalez.com`.
+- Curso BIM 360 / ACC completo: 10 módulos con workflow REAL de obra (issues, partidas, no-proforma, 150 repasos/vivienda, Coordinate, Cost)
+- Sección IA + Cloud en obra (transversal): 5 casos aplicables HOY
+- Nuevo enlace "🚀 IA en obra" en BarraSuperior
+- Carpeta Drive BIM 360 verificada y registrada en connections.json del proyecto hermano FORMACION
 
-### Pendiente
+### Datos Coolify finales
 
-- Deploy bloqueado: clone de repo privado desde Coolify público.
-- DNS Squarespace pendiente del usuario.
-- Capturas reales de Revit pendientes (placeholders por ahora).
+- Project UUID: `ce3rq1cfn7nd4kf1hm0itua2`
+- App UUID: `uihfrun3v6d5v6zsf25tv1dp`
+- Private key UUID: `cvnphbn3a4kns065yrld310g`
+- Deploy completado: `r272u4m5nz4f3q94oulffeds`
+
+## [0.1.0] · 2026-05-21
+
+### Añadido (versión inicial)
+
+- Scaffold Next.js 15 + TypeScript + Tailwind + Framer Motion + Dockerfile standalone
+- 12 componentes reutilizables
+- Curso Revit + BIM completo: 12 módulos
+- Página `/jugar` concurso general
+- Build standalone validado
