@@ -93,13 +93,14 @@ export const CURSOS: Curso[] = [
   {
     slug: 'bim-360',
     titulo: 'BIM 360 · Autodesk Construction Cloud',
-    resumen: 'Coordinación, modelos federados, RFI, planos, control de obra en la nube. Próximamente.',
+    resumen: 'Gestión real de obra: planos en tablet, incidencias, partidas, empresas, informes automáticos, no-proforma, 150 repasos/vivienda.',
     color: '#37474F',
     fondo: '#ECEFF1',
     icono: '☁️',
-    modulos: 0,
-    duracion: 'En preparación',
-    nivel: 'Próximamente'
+    modulos: 10,
+    duracion: '~22 h',
+    nivel: 'Medio → Avanzado',
+    destacado: true
   }
 ];
 
