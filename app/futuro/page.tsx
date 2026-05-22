@@ -4,8 +4,62 @@ import { Caja } from '@/components/Caja';
 import { Acordeon } from '@/components/Acordeon';
 import { GraficoLinea } from '@/components/GraficoLinea';
 import { GraficoBarras } from '@/components/GraficoBarras';
+import { GraficoMultiLinea } from '@/components/GraficoMultiLinea';
 import { GridPictogramas, Versus, Timeline } from '@/components/Pictograma';
 import { Quiz } from '@/components/Quiz';
+
+// === DATOS CON INFLACIÓN ===
+// IPC España acumulado 2007-2026 ≈ +40% (fuente: INE)
+// Salario medio bruto anual: 2007 ~22.500€ → 2026 ~30.000€ (INE Encuesta Estructura Salarial)
+const IPC_FACTOR: Record<string, number> = {
+  '2007': 1.40,  // 1€ de 2007 = 1.40€ de 2026
+  '2009': 1.36,
+  '2011': 1.31,
+  '2013': 1.28,
+  '2015': 1.28,
+  '2017': 1.26,
+  '2019': 1.22,
+  '2021': 1.18,
+  '2023': 1.07,
+  '2025': 1.02,
+  '2026': 1.00
+};
+
+// Precio nominal €/m² España (lo que aparecía en idealista en cada año)
+const PRECIO_NOMINAL = [
+  { x: '2007', y: 2100 },
+  { x: '2009', y: 1900 },
+  { x: '2011', y: 1700 },
+  { x: '2013', y: 1380 },
+  { x: '2015', y: 1430 },
+  { x: '2017', y: 1530 },
+  { x: '2019', y: 1660 },
+  { x: '2021', y: 1750 },
+  { x: '2023', y: 1990 },
+  { x: '2025', y: 2280 },
+  { x: '2026', y: 2384 }
+];
+
+// Precio real (en €/m² de 2026, ajustado por IPC)
+const PRECIO_REAL = PRECIO_NOMINAL.map((p) => ({
+  x: p.x,
+  y: Math.round(p.y * IPC_FACTOR[p.x])
+}));
+
+// Salario medio bruto anual España (INE)
+const SALARIO_NOMINAL = [
+  { x: '2007', y: 22500 },
+  { x: '2009', y: 22890 },
+  { x: '2011', y: 22899 },
+  { x: '2013', y: 22697 },
+  { x: '2015', y: 23106 },
+  { x: '2017', y: 23646 },
+  { x: '2019', y: 24395 },
+  { x: '2021', y: 25896 },
+  { x: '2023', y: 28050 },
+  { x: '2025', y: 29600 },
+  { x: '2026', y: 30000 }
+];
 
 const PRECIO_ESPANA = [
   { x: '2007', y: 2100, evento: 'Pico burbuja' },
@@ -85,6 +139,7 @@ export default function FuturoVivienda() {
             <a href="#coslada" className="bg-white/20 backdrop-blur rounded-full px-4 py-2 hover:bg-white/30 transition">🏘️ Coslada</a>
             <a href="#prevision-10" className="bg-white/20 backdrop-blur rounded-full px-4 py-2 hover:bg-white/30 transition">🔭 10 años</a>
             <a href="#prevision-50" className="bg-white/20 backdrop-blur rounded-full px-4 py-2 hover:bg-white/30 transition">🌌 50 años</a>
+            <a href="#inflacion" className="bg-white/20 backdrop-blur rounded-full px-4 py-2 hover:bg-white/30 transition">💸 Inflación</a>
             <a href="#estable" className="bg-white/20 backdrop-blur rounded-full px-4 py-2 hover:bg-white/30 transition">🛡️ Más estable</a>
             <a href="#plan" className="bg-marca-amarillo text-marca-carbon rounded-full px-4 py-2 font-extrabold">🎯 Tu plan</a>
           </div>
@@ -246,6 +301,106 @@ export default function FuturoVivienda() {
             <br />
             <strong>Año 3</strong>: piso reformable 120K€ Coslada. Entrada 30K + impuestos 12K. Reformas tú = ganas valor.
           </Caja>
+        </section>
+
+        {/* ============== INFLACIÓN + SALARIO ============== */}
+        <section id="inflacion" className="scroll-mt-20">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-marca-carbon mb-3 text-center">
+            💸 <span className="subraya">Con la inflación</span> · precio real
+          </h2>
+          <p className="text-center text-marca-carbon/70 mb-8">
+            El precio nominal engaña. <strong>Lo que importa es el precio real</strong> (descontada la inflación)
+            y cuántos años de salario te cuesta.
+          </p>
+
+          {/* Pictogramas claves */}
+          <GridPictogramas
+            items={[
+              { icono: '📊', dato: '+40%', etiqueta: 'IPC acumulado 2007-2026', color: '#E65100', fondoColor: '#FFF3E0' },
+              { icono: '💼', dato: '+33%', etiqueta: 'Salario medio bruto', color: '#F57C00', fondoColor: '#FFF8E1' },
+              { icono: '🏠', dato: '+13%', etiqueta: 'Precio vivienda nominal', color: '#0F0F0F', fondoColor: '#FAFAFA' },
+              { icono: '📉', dato: '-19%', etiqueta: 'Precio vivienda REAL', color: '#2E7D32', fondoColor: '#E8F5E9' }
+            ]}
+          />
+
+          <Caja tipo="info" titulo="¿Qué significa esto?">
+            Si quitas la inflación, hoy la vivienda es <strong>~19% más barata que en 2007</strong> en euros de hoy.
+            Y el salario ha subido lo suficiente para que comprar piso cueste <strong>menos años de sueldo</strong>.
+            La sensación de "imposible comprar" viene del <strong>encarecimiento percibido</strong> (precios nominales altos)
+            y <strong>tipos de interés</strong> (hipoteca cara), no del precio real.
+          </Caja>
+
+          {/* Gráfico doble nominal vs real */}
+          <GraficoMultiLinea
+            titulo="Precio €/m² · Nominal vs Real (€ de 2026)"
+            subtitulo="Nominal = lo que veías en idealista. Real = ajustado por IPC España (fuente INE)."
+            unidad="€/m²"
+            alto={320}
+            ejeX={PRECIO_NOMINAL.map((p) => p.x)}
+            series={[
+              {
+                nombre: 'Nominal (en su año)',
+                color: '#0F0F0F',
+                puntos: PRECIO_NOMINAL
+              },
+              {
+                nombre: 'Real (€ de 2026)',
+                color: '#F57C00',
+                puntos: PRECIO_REAL
+              }
+            ]}
+          />
+
+          {/* Versus años salario */}
+          <h3 className="text-2xl font-extrabold text-marca-carbon mt-10 mb-3 text-center">
+            🧮 ¿Cuántos años de sueldo cuesta un piso de 90 m²?
+          </h3>
+          <p className="text-center text-marca-carbon/70 mb-4 text-sm">
+            Salario medio bruto España × años hasta cubrir el coste del piso (90 m² × €/m² medio).
+          </p>
+
+          <Versus
+            izq={{
+              titulo: 'AÑO 2007',
+              dato: '8,4 años',
+              nota: 'Piso 189.000€ ÷ sueldo 22.500€',
+              color: '#0F0F0F',
+              icono: '⏳'
+            }}
+            der={{
+              titulo: 'AÑO 2026',
+              dato: '7,2 años',
+              nota: 'Piso 214.560€ ÷ sueldo 30.000€',
+              color: '#F57C00',
+              icono: '⏱️'
+            }}
+          />
+
+          <Caja tipo="aviso" titulo="OJO: la trampa de los tipos de interés">
+            Aunque el ratio precio/salario ha bajado, el <strong>coste real de la hipoteca</strong> ha SUBIDO
+            mucho desde 2022 (tipos al 4%+ vs 0% que había en 2015-2021). Por eso muchos jóvenes no pueden
+            comprar aunque "técnicamente" la vivienda sea más asequible: el problema es la cuota mensual,
+            no el precio total.
+          </Caja>
+
+          <Caja tipo="truco" titulo="Tu ventana de oportunidad">
+            Si BCE empieza a bajar tipos en 2027-2028 (probable con inflación controlada), tu jugada es:
+            <ol className="list-decimal pl-5 space-y-1 mt-2">
+              <li>Ahorrar entrada agresivo durante 2026-2027 (ratio precio/salario favorable)</li>
+              <li>Comprar cuando tipos bajen <strong>antes</strong> de que suban precios por demanda</li>
+              <li>Hipoteca fija a 25-30 años cuando esté al 2,5-3%</li>
+            </ol>
+          </Caja>
+
+          {/* Evolución salarios España */}
+          <GraficoLinea
+            titulo="Salario medio bruto anual · España"
+            subtitulo="Datos INE Encuesta de Estructura Salarial · proyección 2025-2026"
+            unidad="€"
+            puntos={SALARIO_NOMINAL.map((s) => ({ x: s.x, y: s.y }))}
+            color="#0F0F0F"
+            alto={260}
+          />
         </section>
 
         {/* ============== PREVISIÓN 10 AÑOS ============== */}
