@@ -1,11 +1,12 @@
 import Link from 'next/link';
+import { Logo } from '@/components/Logo';
 
 export function BarraSuperior() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b-4 border-marca-rojo shadow-sm">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-5 py-3">
         <Link href="/" className="group flex items-center gap-3">
-          <span className="text-3xl" aria-hidden>🦉</span>
+          <Logo size={44} />
           <div className="leading-tight">
             <div className="font-bold text-marca-carbon text-sm sm:text-base group-hover:text-marca-rojo transition">
               Documentación del Profesor
