@@ -10,16 +10,36 @@ const config: Config = {
     extend: {
       colors: {
         marca: {
+          // BASE: blanco + negro (alta legibilidad TDAH)
+          blanco: '#FFFFFF',
+          negro: '#0F0F0F',
+          carbon: '#1A1A1A',
+          gris: '#666666',
+          grisClaro: '#E5E5E5',
+          fondo: '#FAFAFA',
+
+          // ACENTO PRINCIPAL: naranja Ferrovial
+          naranja: '#F57C00',
+          naranjaOscuro: '#E65100',
+          naranjaClaro: '#FF9800',
+
+          // ACENTO SECUNDARIO: amarillo oscuro (contrasta con blanco)
+          amarillo: '#FFB300',
+          amarilloClaro: '#FFC72C',
+          crema: '#FFF8E1',
+
+          // SEMÁNTICA (uso restringido)
+          exito: '#2E7D32',
+          alerta: '#C8102E',
+          aviso: '#EF6C00',
+
+          // PARA GRÁFICOS (uso solo en visualizaciones)
           rojo: '#C8102E',
-          amarillo: '#FFC72C',
           azul: '#1565C0',
           verde: '#2E7D32',
-          naranja: '#EF6C00',
           morado: '#6A1B9A',
           turquesa: '#00838F',
-          rosa: '#C2185B',
-          crema: '#FFF8E1',
-          carbon: '#1A1A1A'
+          rosa: '#C2185B'
         }
       },
       fontFamily: {

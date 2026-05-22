@@ -5,13 +5,13 @@ import Link from 'next/link';
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-animado text-white py-24 px-6">
-      <div className="absolute inset-0 bg-black/10" />
+      <div className="absolute inset-0 bg-black/20" />
       <div className="relative max-w-5xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, scale: 0.7 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="inline-block bg-marca-amarillo text-marca-carbon px-5 py-2 rounded-full font-bold mb-6 shadow-lg"
+          className="inline-block bg-marca-amarillo text-marca-negro px-5 py-2 rounded-full font-extrabold mb-6 shadow-lg"
         >
           📚 Aula del Profesor Rubén Jiménez González
         </motion.div>
@@ -20,9 +20,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="text-4xl sm:text-6xl font-extrabold leading-tight drop-shadow-md mb-5"
+          className="text-4xl sm:text-6xl font-extrabold leading-tight drop-shadow-lg mb-5"
         >
-          Formaciones <span className="subraya text-marca-carbon">interactivas</span>
+          Formaciones <span className="subraya text-marca-negro">interactivas</span>
           <br />
           para Arquitecto Técnico
         </motion.h1>
@@ -34,8 +34,6 @@ export function Hero() {
           className="text-lg sm:text-xl max-w-3xl mx-auto mb-9 text-white/95"
         >
           Aprende jugando. Quizzes, retos, animaciones y material real del programa.
-          <br className="hidden sm:block" />
-          Diseñado para mentes <strong>TDAH y dislexia visual</strong>: cero párrafos eternos.
         </motion.p>
 
         <motion.div
@@ -46,13 +44,13 @@ export function Hero() {
         >
           <Link
             href="/cursos"
-            className="bg-white text-marca-rojo font-extrabold px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition"
+            className="bg-white text-marca-naranja font-extrabold px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition"
           >
             🎓 Empezar a aprender
           </Link>
           <Link
             href="/jugar"
-            className="bg-marca-amarillo text-marca-carbon font-extrabold px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition"
+            className="bg-marca-amarillo text-marca-negro font-extrabold px-8 py-4 rounded-xl shadow-xl hover:scale-105 transition"
           >
             🎮 Jugar a quizzes
           </Link>

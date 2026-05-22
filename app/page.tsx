@@ -26,15 +26,15 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="mt-16 bg-white rounded-2xl p-8 shadow-md border-l-8 border-marca-amarillo">
+        <div className="mt-16 bg-white rounded-2xl p-8 shadow-md border-l-8 border-marca-naranja">
           <h3 className="text-2xl font-extrabold text-marca-carbon mb-3">
             🎯 Diseñado para tu forma de aprender
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 text-sm">
             <div>
               <div className="text-3xl mb-2">🎨</div>
-              <div className="font-bold mb-1">Colores fuertes</div>
-              <div className="text-marca-carbon/70">Cada idea con su color. Captura la atención al instante.</div>
+              <div className="font-bold mb-1">Visual primero</div>
+              <div className="text-marca-carbon/70">Iconos grandes, datos enormes, mínimo párrafo.</div>
             </div>
             <div>
               <div className="text-3xl mb-2">🎮</div>

@@ -66,7 +66,7 @@ export default function FuturoVivienda() {
       <BarraSuperior />
 
       {/* HERO */}
-      <header className="px-6 py-20 text-white relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #1A1A1A 0%, #1565C0 50%, #2E7D32 100%)' }}>
+      <header className="px-6 py-20 text-white relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 50%, #E65100 100%)' }}>
         <div className="max-w-5xl mx-auto relative text-center">
           <div className="inline-block bg-marca-amarillo text-marca-carbon font-extrabold px-4 py-2 rounded-full text-sm mb-5">
             🔮 INFORME · PRÓXIMOS 50 AÑOS
@@ -101,35 +101,35 @@ export default function FuturoVivienda() {
 
           <GridPictogramas
             items={[
-              { icono: '🎂', dato: '32', etiqueta: 'Años', color: '#C8102E', fondoColor: '#FFEBEE' },
-              { icono: '🎓', dato: '2', etiqueta: 'Grados UPM', color: '#1565C0', fondoColor: '#E3F2FD' },
-              { icono: '🏗️', dato: '5', etiqueta: 'Años obra', color: '#2E7D32', fondoColor: '#E8F5E9' },
-              { icono: '📍', dato: 'Coslada', etiqueta: 'Ubicación', color: '#EF6C00', fondoColor: '#FFF3E0' }
+              { icono: '🎂', dato: '32', etiqueta: 'Años', color: '#F57C00', fondoColor: '#FFF8E1' },
+              { icono: '🎓', dato: '2', etiqueta: 'Grados UPM', color: '#0F0F0F', fondoColor: '#FAFAFA' },
+              { icono: '🏗️', dato: '5', etiqueta: 'Años obra', color: '#F57C00', fondoColor: '#FFF8E1' },
+              { icono: '📍', dato: 'Coslada', etiqueta: 'Ubicación', color: '#0F0F0F', fondoColor: '#FAFAFA' }
             ]}
           />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
-            <div className="bg-white rounded-2xl p-5 shadow-md border-l-8 border-marca-azul">
+            <div className="bg-white rounded-2xl p-5 shadow-md border-l-8 border-marca-negro">
               <div className="text-2xl mb-1">🎓</div>
-              <div className="font-extrabold text-marca-azul text-sm uppercase">Formación</div>
+              <div className="font-extrabold text-marca-negro text-sm uppercase">Formación</div>
               <div className="text-marca-carbon font-bold mt-1">Doble Grado UPM</div>
               <div className="text-sm text-marca-carbon/70">Edificación + ADE · MH en Calidad</div>
             </div>
-            <div className="bg-white rounded-2xl p-5 shadow-md border-l-8 border-marca-verde">
+            <div className="bg-white rounded-2xl p-5 shadow-md border-l-8 border-marca-naranja">
               <div className="text-2xl mb-1">💼</div>
-              <div className="font-extrabold text-marca-verde text-sm uppercase">Experiencia</div>
+              <div className="font-extrabold text-marca-naranja text-sm uppercase">Experiencia</div>
               <div className="text-marca-carbon font-bold mt-1">5 años · obra + tech</div>
               <div className="text-sm text-marca-carbon/70">ARPADA · Habitat · ARTES BUHO CTO</div>
             </div>
-            <div className="bg-white rounded-2xl p-5 shadow-md border-l-8 border-marca-rojo">
+            <div className="bg-white rounded-2xl p-5 shadow-md border-l-8 border-marca-amarillo">
               <div className="text-2xl mb-1">🎯</div>
-              <div className="font-extrabold text-marca-rojo text-sm uppercase">Objetivo</div>
+              <div className="font-extrabold text-marca-naranjaOscuro text-sm uppercase">Objetivo</div>
               <div className="text-marca-carbon font-bold mt-1">FM · CM · PM</div>
               <div className="text-sm text-marca-carbon/70">Estable · sin estrés · 45-65K</div>
             </div>
-            <div className="bg-white rounded-2xl p-5 shadow-md border-l-8 border-marca-naranja">
+            <div className="bg-white rounded-2xl p-5 shadow-md border-l-8 border-marca-naranjaOscuro">
               <div className="text-2xl mb-1">🏡</div>
-              <div className="font-extrabold text-marca-naranja text-sm uppercase">Vivienda</div>
+              <div className="font-extrabold text-marca-naranjaOscuro text-sm uppercase">Vivienda</div>
               <div className="text-marca-carbon font-bold mt-1">Buscas independizarte</div>
               <div className="text-sm text-marca-carbon/70">Coslada o cerca · Bono Joven aplica ✓</div>
             </div>
@@ -205,10 +205,10 @@ export default function FuturoVivienda() {
 
           <GridPictogramas
             items={[
-              { icono: '🛒', dato: '2.450€', etiqueta: '€/m² compra', color: '#1565C0', fondoColor: '#E3F2FD' },
-              { icono: '🏠', dato: '900€', etiqueta: '€/mes alquiler 2 dorm', color: '#2E7D32', fondoColor: '#E8F5E9' },
-              { icono: '🛏️', dato: '450€', etiqueta: '€/mes habitación', color: '#EF6C00', fondoColor: '#FFF3E0' },
-              { icono: '🚇', dato: '20 min', etiqueta: 'a Atocha', color: '#6A1B9A', fondoColor: '#F3E5F5' }
+              { icono: '🛒', dato: '2.450€', etiqueta: '€/m² compra', color: '#0F0F0F', fondoColor: '#FAFAFA' },
+              { icono: '🏠', dato: '900€', etiqueta: '€/mes alquiler 2 dorm', color: '#F57C00', fondoColor: '#FFF8E1' },
+              { icono: '🛏️', dato: '450€', etiqueta: '€/mes habitación', color: '#E65100', fondoColor: '#FFF3E0' },
+              { icono: '🚇', dato: '20 min', etiqueta: 'a Atocha', color: '#0F0F0F', fondoColor: '#FAFAFA' }
             ]}
           />
 
@@ -218,25 +218,25 @@ export default function FuturoVivienda() {
           />
 
           <div className="bg-gradient-to-br from-marca-amarillo to-marca-naranja rounded-2xl p-6 my-8 shadow-xl">
-            <div className="text-marca-carbon font-extrabold text-2xl mb-2 flex items-center gap-3">
+            <div className="text-marca-negro font-extrabold text-2xl mb-2 flex items-center gap-3">
               <span className="text-4xl">💸</span>
               <span>BONO ALQUILER JOVEN 2026</span>
             </div>
             <div className="grid grid-cols-3 gap-4 mt-4">
               <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-3xl font-extrabold text-marca-rojo">300€</div>
+                <div className="text-3xl font-extrabold text-marca-naranja">300€</div>
                 <div className="text-xs uppercase font-bold text-marca-carbon/60 mt-1">/mes</div>
               </div>
               <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-3xl font-extrabold text-marca-azul">48</div>
+                <div className="text-3xl font-extrabold text-marca-negro">48</div>
                 <div className="text-xs uppercase font-bold text-marca-carbon/60 mt-1">meses</div>
               </div>
               <div className="bg-white rounded-xl p-4 text-center">
-                <div className="text-3xl font-extrabold text-marca-verde">14.400€</div>
+                <div className="text-3xl font-extrabold text-marca-exito">14.400€</div>
                 <div className="text-xs uppercase font-bold text-marca-carbon/60 mt-1">total</div>
               </div>
             </div>
-            <div className="text-marca-carbon text-sm mt-4 font-semibold">
+            <div className="text-marca-negro text-sm mt-4 font-semibold">
               ✅ Tienes 32 años · ✅ Coslada en grupo 29 (techo 900€) · ✅ No propietario
             </div>
           </div>
@@ -256,10 +256,10 @@ export default function FuturoVivienda() {
 
           <GridPictogramas
             items={[
-              { icono: '📊', dato: '+3.6%', etiqueta: 'Sector 2026', color: '#1565C0', fondoColor: '#E3F2FD' },
-              { icono: '🏘️', dato: '150K', etiqueta: 'Viviendas/año', color: '#2E7D32', fondoColor: '#E8F5E9' },
-              { icono: '🔧', dato: '79%', etiqueta: 'Déficit mano obra', color: '#C8102E', fondoColor: '#FFEBEE' },
-              { icono: '📈', dato: '+2-4%', etiqueta: 'Precio anual', color: '#EF6C00', fondoColor: '#FFF3E0' }
+              { icono: '📊', dato: '+3.6%', etiqueta: 'Sector 2026', color: '#F57C00', fondoColor: '#FFF8E1' },
+              { icono: '🏘️', dato: '150K', etiqueta: 'Viviendas/año', color: '#0F0F0F', fondoColor: '#FAFAFA' },
+              { icono: '🔧', dato: '79%', etiqueta: 'Déficit mano obra', color: '#E65100', fondoColor: '#FFF3E0' },
+              { icono: '📈', dato: '+2-4%', etiqueta: 'Precio anual', color: '#F57C00', fondoColor: '#FFF8E1' }
             ]}
           />
 
@@ -370,7 +370,7 @@ export default function FuturoVivienda() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-marca-carbon mb-3 text-center">
             🧠 <span className="subraya">Reto</span> final
           </h2>
-          <Quiz titulo="🎯 Informe 50 años" preguntas={PREGUNTAS} color="#1565C0" />
+          <Quiz titulo="🎯 Informe 50 años" preguntas={PREGUNTAS} color="#F57C00" />
         </section>
 
         <Caja tipo="cliente" titulo="Pensamiento final">

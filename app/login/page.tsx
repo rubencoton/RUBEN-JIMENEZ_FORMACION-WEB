@@ -50,7 +50,7 @@ function LoginForm() {
         <h1 className="font-extrabold text-marca-carbon text-2xl mt-4 text-center">
           Documentación del Profesor
         </h1>
-        <h2 className="font-extrabold text-marca-rojo text-2xl text-center">
+        <h2 className="font-extrabold text-marca-naranja text-2xl text-center">
           Rubén Jiménez González
         </h2>
         <p className="text-sm text-marca-carbon/70 text-center mt-3">
@@ -71,7 +71,7 @@ function LoginForm() {
             autoFocus
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-4 rounded-xl border-2 border-marca-carbon/15 focus:border-marca-rojo focus:outline-none text-lg font-mono tracking-wider transition"
+            className="w-full px-4 py-4 rounded-xl border-2 border-marca-carbon/15 focus:border-marca-naranja focus:outline-none text-lg font-mono tracking-wider transition"
             placeholder="••••••••"
           />
         </div>
@@ -80,7 +80,7 @@ function LoginForm() {
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-marca-rojo/10 border-l-4 border-marca-rojo text-marca-rojo px-4 py-3 rounded-r-lg font-semibold text-sm"
+            className="bg-marca-alerta/10 border-l-4 border-marca-alerta text-marca-alerta px-4 py-3 rounded-r-lg font-semibold text-sm"
           >
             ❌ {error}
           </motion.div>
@@ -89,7 +89,7 @@ function LoginForm() {
         <button
           type="submit"
           disabled={loading || !password}
-          className="w-full bg-marca-rojo text-white font-extrabold py-4 rounded-xl shadow-md hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-marca-naranja text-white font-extrabold py-4 rounded-xl shadow-md hover:bg-marca-naranjaOscuro hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {loading ? '⏳ Verificando…' : '🚪 Entrar'}
         </button>
@@ -106,7 +106,7 @@ export default function LoginPage() {
   return (
     <main
       className="min-h-screen w-full grid place-items-center p-5"
-      style={{ background: 'linear-gradient(135deg, #1A1A1A 0%, #1565C0 50%, #2E7D32 100%)' }}
+      style={{ background: 'linear-gradient(135deg, #0F0F0F 0%, #1A1A1A 40%, #E65100 100%)' }}
     >
       <Suspense fallback={<div className="text-white">Cargando…</div>}>
         <LoginForm />
