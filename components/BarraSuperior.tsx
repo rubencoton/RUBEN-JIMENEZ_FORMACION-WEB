@@ -25,6 +25,9 @@ export function BarraSuperior() {
           <Link href="/ia-en-obra" className="px-3 py-2 rounded-lg hover:bg-marca-amarillo/30 transition">
             🚀 IA en obra
           </Link>
+          <Link href="/futuro" className="px-3 py-2 rounded-lg hover:bg-marca-amarillo/30 transition">
+            🔮 Próx 50 años
+          </Link>
           <Link href="/jugar" className="px-3 py-2 rounded-lg bg-marca-rojo text-white hover:bg-marca-rojo/90 transition">
             🎮 Jugar
           </Link>
