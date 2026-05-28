@@ -28,14 +28,16 @@
 - Páginas vivas: `/` (home), `/cursos`, `/cursos/revit`, `/cursos/bim-360`, `/jugar`, `/ia-en-obra`, `/futuro`, `/puesto-ideal`.
 - ~15 componentes interactivos: `Quiz`, `Flashcard`, `Acordeon`, `Caja` (9 tipos), `Drag`, `Pictograma`/`GridPictogramas`/`Versus`/`Timeline`, `GraficoBarras`/`GraficoLinea`/`GraficoMultiLinea`, `Hero`, `BarraSuperior`, `PieDePagina`, `CajaModulo`.
 
+- **(2026-05-28) 7 cursos nuevos interactivos** desplegados y vivos: Facility Manager, MS Project, AutoCAD, Presto, UrbiCAD, CE3X, Tasación. Cada uno: landing + módulos data-driven (`content/<curso>/{meta.ts,modulos-data.ts}`) con bloques, flashcards, quiz y **módulo final de Conclusiones (TFG)**.
+- Componentes genéricos `CursoLanding` y `CursoModulo` (una sola implementación para todos los cursos data-driven). Facility Manager añadido al catálogo como destacado nº 1.
+- Todas las formaciones del catálogo (9) son ya **100% interactivas**. Build OK (104 páginas), tildes verificadas, deploy verificado en vivo.
+
 **PENDIENTE**
-- **App interactiva propia por cada formación** que aún solo tiene PDF: MS Project, Presto, AutoCAD, CE3X, UrbiCAD, Tasación, Facility Manager. (Revit, BIM360, Futuro, Puesto Ideal ya tienen página).
-- Añadir sección **Conclusiones (TFG)** interactiva a cada curso, en paralelo a los `97_conclusiones.md` del repo hermano.
-- Auditoría transversal de interactividad (que TODO curso tenga quiz/flashcards/gráficos, no solo texto).
 - (No bloqueante) Sustituir esquemas PIL por capturas REALES de programas.
+- (Mejora futura) Añadir más juegos/drag-and-drop a cursos concretos si se quiere subir el listón de interactividad.
 
 **SIGUIENTE PASO**
-Construir las 7 páginas de curso que faltan reutilizando los componentes existentes y el contenido markdown del repo hermano (`../RUBEN-JIMENEZ_FORMACION/docs/temarios/<slug>/`).
+Catálogo completo y vivo. Próximas formaciones nuevas: replicar patrón `content/<curso>/` + wrappers en `app/cursos/<curso>/` (ver Facility Manager como molde).
 
 ---
 
