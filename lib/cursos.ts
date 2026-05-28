@@ -11,7 +11,27 @@ export type Curso = {
   destacado?: boolean;
 };
 
+// Metadatos de contenido que exporta cada curso en content/<curso>/meta.ts
+export type CursoMeta = {
+  slug: string;
+  titulo: string;
+  color: string;
+  colorClaro: string;
+};
+
 export const CURSOS: Curso[] = [
+  {
+    slug: 'facility-manager',
+    titulo: 'Facility Manager',
+    resumen: 'Tu mejor puesto: qué hace un FM, competencias, certificaciones, sueldos y por qué encaja perfecto con tu perfil AT + ADE.',
+    color: '#283593',
+    fondo: '#E8EAF6',
+    icono: '🏢',
+    modulos: 10,
+    duracion: '~9 h',
+    nivel: 'Carrera profesional',
+    destacado: true
+  },
   {
     slug: 'revit',
     titulo: 'Revit + BIM',

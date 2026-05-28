@@ -1,5 +1,16 @@
 # CHANGELOG — RUBEN-JIMENEZ_FORMACION-WEB
 
+## [0.3.0] · 2026-05-28
+
+### Añadido
+- **7 cursos nuevos interactivos** (antes solo tenían PDF): Facility Manager, Microsoft Project, AutoCAD 2027, Presto y Arquímedes, UrbiCAD Seguridad y Salud, CE3X y HULC, Tasación Inmobiliaria.
+- Cada curso: landing + módulos data-driven con bloques visuales, flashcards, quiz y un **módulo final de Conclusiones (TFG)**.
+- Componentes genéricos reutilizables `CursoLanding` y `CursoModulo` (una sola implementación para todos los cursos data-driven).
+- **Facility Manager** añadido al catálogo (`lib/cursos.ts`) como curso destacado nº 1.
+
+### Resultado
+- Las formaciones del catálogo son ahora **100% interactivas**: cada una tiene su propia app (Revit y BIM 360 ya la tenían; ahora también las 7 nuevas).
+
 ## [0.2.0] · 2026-05-21
 
 ### Desplegado en producción ✅
