@@ -29,6 +29,9 @@ export function BarraSuperior() {
           <Link href="/futuro" className="px-3 py-2 rounded-lg hover:bg-marca-amarillo/20 transition text-marca-carbon">
             🔮 Próx 50 años
           </Link>
+          <Link href="/puesto-ideal" className="px-3 py-2 rounded-lg hover:bg-marca-amarillo/20 transition text-marca-carbon">
+            🎯 Tu puesto
+          </Link>
           <Link href="/jugar" className="px-3 py-2 rounded-lg bg-marca-naranja text-white hover:bg-marca-naranjaOscuro transition">
             🎮 Jugar
           </Link>
