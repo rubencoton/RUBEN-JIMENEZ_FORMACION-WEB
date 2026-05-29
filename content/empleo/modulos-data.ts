@@ -6,7 +6,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     bloques: [
       {
         tipo: 'parrafo',
-        texto: 'Este informe responde a una pregunta concreta: ¿dónde busca trabajo un Arquitecto Técnico con doble grado ADE que aspira a Construction Manager, Facility Manager, Project Manager o Jefe de Producción en Madrid?'
+        texto: 'Este informe responde a una pregunta concreta: ¿dónde busca trabajo un Arquitecto Técnico con doble grado ADE que aspira a Construction Manager, Facility Manager, Project Manager o Jefe de Producción en Madrid? Se hicieron 2 investigaciones. Fecha de verificación: 29/05/2026.'
       },
       {
         tipo: 'titulo',
@@ -23,16 +23,17 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
       },
       {
         tipo: 'titulo',
-        texto: '🔬 Cómo se verificó cada dato'
+        texto: '🔬 Cómo se verificó cada dato (2 investigaciones)'
       },
       {
         tipo: 'lista',
         items: [
           '5 ángulos de búsqueda: generalistas, especializados, cazatalentos, colegios y empleo público.',
-          '23 fuentes consultadas; se priorizaron las webs oficiales de cada portal.',
+          '23 fuentes en la 1ª investigación; 22 en la 2ª. Se priorizaron las webs oficiales de cada portal.',
           'Cada dato clave pasó por triple voto adversarial: 3 revisores intentan refutarlo.',
-          'Resultado: 25 datos verificados → 21 confirmados, 4 descartados.',
-          'Los 4 descartados se listan en el módulo 8 con transparencia total.'
+          '1ª investigación: 25 datos → 21 confirmados, 4 descartados.',
+          '2ª investigación (29/05/2026): cerró los pendientes de LinkedIn, filtros de modalidad, volumen FM, Tecnoempleo y empleo público. 22 confirmados, 3 descartados.',
+          'Los datos descartados se listan en el módulo 8 con transparencia total.'
         ]
       },
       {
@@ -51,7 +52,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         tipo: 'caja',
         tipoCaja: 'cliente',
         titulo: 'Resumen ejecutivo para Rubén',
-        texto: 'Regístrate gratis en InfoJobs, Indeed, Michael Page, Hays y Construyendoempleo. Activa alertas filtradas a Madrid. Usa tu colegio COAATM como canal extra. LinkedIn también, pero sus cifras aquí no están probadas 🔴.'
+        texto: 'Regístrate gratis en LinkedIn, InfoJobs, Indeed, Michael Page, Hays y Construyendoempleo. Activa alertas filtradas a Madrid. LinkedIn es ahora plataforma TOP: tiene filtro nativo híbrido/remoto y ~75 ofertas FM en Madrid. Usa tu colegio COAATM como canal extra.'
       },
       {
         tipo: 'caja',
@@ -62,8 +63,8 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     ],
     flashcards: [
       {
-        frente: '¿Cuántos datos se verificaron y cuántos se confirmaron?',
-        reverso: '25 datos verificados → 21 confirmados, 4 descartados. Método: triple voto adversarial (3 revisores intentan refutar el dato).'
+        frente: '¿Cuántas investigaciones se hicieron y cuántos datos se confirmaron en total?',
+        reverso: '2 investigaciones. En la 1ª: 25 datos → 21 confirmados, 4 descartados. En la 2ª: cerró pendientes de LinkedIn, filtros y FM. 22 confirmados, 3 descartados. Método: triple voto adversarial.'
       },
       {
         frente: '¿Qué significa el icono 🟡 en este informe?',
@@ -76,10 +77,10 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     ],
     preguntas: [
       {
-        pregunta: '¿Cuántas fuentes se consultaron para elaborar este informe?',
-        opciones: ['10 fuentes', '23 fuentes', '50 fuentes', '5 fuentes'],
+        pregunta: '¿Cuántas investigaciones se realizaron para elaborar este informe?',
+        opciones: ['Solo una investigación', 'Dos investigaciones', 'Tres investigaciones', 'Cuatro investigaciones'],
         correcta: 1,
-        explicacion: 'Se consultaron 23 fuentes priorizando las webs oficiales de cada portal. Los 25 datos más importantes pasaron por triple voto adversarial.'
+        explicacion: 'Se hicieron 2 investigaciones. La 2ª (29/05/2026) cerró los pendientes de LinkedIn, filtros de modalidad, volumen FM, Tecnoempleo y empleo público de la Comunidad de Madrid.'
       },
       {
         pregunta: '¿Qué indica el icono 🔴 junto a un dato?',
@@ -110,7 +111,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     bloques: [
       {
         tipo: 'parrafo',
-        texto: 'Son los portales de mayor volumen y gratuitos para el candidato. La empresa paga la publicación; tú te registras gratis. Son la base diaria de búsqueda.'
+        texto: 'Son los portales de mayor volumen y gratuitos para el candidato. La empresa paga la publicación; tú te registras gratis. Son la base diaria de búsqueda. LinkedIn fue verificado en la 2ª investigación y pasa a ser plataforma TOP.'
       },
       {
         tipo: 'titulo',
@@ -123,6 +124,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
           'Categorías propias: Project Manager / Jefe de Proyecto y Production Manager / Jefe de Producción. 🟢',
           'Ejemplos reales (29/05/2026): "Senior Project Manager - Grandes Proyectos Edificación", "Jefe de Producción - Edificación". 🟢',
           'Volumen: 64 ofertas en categoría "production manager" (snapshot 29/05/2026). 🟡 cambia a diario.',
+          'Filtro de modalidad NATIVO: "Presencial/Teletrabajo" con opciones Solo teletrabajo / Híbrido / Presencial. 🟢 ayuda oficial.',
           'Coste para el candidato: gratis (la empresa paga la selección, entre 120 y 400 euros al mes). 🟢'
         ]
       },
@@ -142,24 +144,36 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
           'Agrega ofertas de muchas webs. Muy útil para ampliar cobertura. 🟢',
           'Gratuito: "Sube tu CV y deja que las empresas te encuentren" (fuente: soporte oficial Indeed). 🟢',
           'Cubre los 4 puestos, incluido Construction Manager en Madrid. 🟢',
+          'Filtro de modalidad disponible: "Remote" / por ubicación. Versión global confirmada. 🟡 en es.indeed por URL/ubicación.',
           'Cifra "~1.000 ofertas de construcción en España": DESCARTADA. 🔴 voto 0-3, no contrastable.'
         ]
       },
       {
         tipo: 'titulo',
-        texto: '🔴 LinkedIn — pendiente de contrastar'
+        texto: '🟢 LinkedIn — VERIFICADO (2ª investigación)'
+      },
+      {
+        tipo: 'lista',
+        items: [
+          'Publica los 4 perfiles en Madrid. Verificado con web oficial de LinkedIn. 🟢',
+          'Volumen: "1000+" Project Manager y ~75 Facility Management en Madrid (la palabra PM incluye PM de informática). 🟡 snapshot, fluctúa.',
+          'Títulos FM reales vistos: Facility Manager, Technical Property Manager, Facilities Coordinator, Gestor de Servicios FM, Junior Portfolio Manager. 🟢',
+          'Alertas de empleo GRATIS: activas un botón en la búsqueda, diarias o semanales, por email y app. Hasta 20 alertas. 🟢 ayuda oficial LinkedIn.',
+          'Filtro de modalidad NATIVO: Híbrido / Presencial / En remoto (con número de ofertas en cada uno). 🟢',
+          'Filtro por municipio: Madrid capital, Tres Cantos, Getafe, Alcobendas, Pozuelo... 🟢'
+        ]
       },
       {
         tipo: 'caja',
         tipoCaja: 'dato',
-        titulo: 'LinkedIn: sin datos verificados en esta investigación',
-        texto: 'LinkedIn es referencia habitual para CM/FM/PM, pero ningún dato de LinkedIn sobrevivió con fuente primaria en esta investigación. Ni el volumen, ni el coste Premium ni el filtro por modalidad se verificaron. Úsalo por costumbre del sector, pero no des por ciertas cifras sin contrastar. 🔴'
+        titulo: '¿Vale la pena LinkedIn Premium? 🔴',
+        texto: 'Premium añade 5 InMails/mes para escribir a reclutadores fuera de tu red, y datos de encaje con IA (aunque esos insights podrían NO estar disponibles en España). El precio exacto en España (2025-2026) NO se pudo verificar en fuente oficial 🔴. Como las alertas y los filtros clave son gratis, empieza con la cuenta gratuita. Valora Premium solo si quieres escribir en frío a reclutadores.'
       },
       {
         tipo: 'caja',
         tipoCaja: 'cliente',
         titulo: 'Recomendación para Rubén',
-        texto: 'Empieza por InfoJobs + Indeed (confirmados, gratis, alto volumen). Mantén LinkedIn activo porque el sector lo usa, sabiendo que sus cifras aquí no están probadas.'
+        texto: 'LinkedIn pasa a ser plataforma TOP por su filtro nativo híbrido/remoto + por municipio: justo lo que necesitas por la terapia. Úsalo gratis con alertas. Combínalo con InfoJobs + Indeed (confirmados, alto volumen). Premium, de momento, no hace falta.'
       }
     ],
     flashcards: [
@@ -168,31 +182,31 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         reverso: '64 ofertas (🟡 snapshot que cambia a diario). Lo estable es que InfoJobs tiene categoría propia de Production Manager / Jefe de Producción.'
       },
       {
-        frente: '¿Por qué LinkedIn aparece con 🔴 en este informe?',
-        reverso: 'Porque ningún dato de LinkedIn (volumen, coste, filtros) sobrevivió con fuente primaria. Queda como pendiente de una segunda investigación.'
+        frente: '¿Por qué LinkedIn es ahora plataforma TOP para Rubén?',
+        reverso: 'Porque tiene filtro NATIVO de modalidad (Híbrido/Presencial/En remoto) + filtro por municipio (Madrid, Getafe...). Justo lo que necesita por la terapia 2 días/semana. Verificado en la 2ª investigación. 🟢'
       },
       {
-        frente: '¿Qué implica que Indeed sea "gratuito para el candidato"?',
-        reverso: 'Que el candidato sube el CV sin pagar. Las empresas pagan por publicar. Confirmado por el soporte oficial de Indeed. 🟢'
+        frente: '¿Qué implica que LinkedIn Premium no tenga precio verificado en España?',
+        reverso: 'Está marcado 🔴: no se encontró fuente oficial con el precio exacto para España 2025-2026. Además, los insights con IA podrían no estar disponibles en España. Recomendación: empezar gratis.'
       }
     ],
     preguntas: [
       {
-        pregunta: '¿Cuál de estos portales generalistas tiene los datos más verificados en este informe?',
-        opciones: ['LinkedIn', 'Glassdoor', 'InfoJobs e Indeed', 'Infojobs y LinkedIn'],
+        pregunta: '¿Cuál es el nivel de fiabilidad de LinkedIn en este informe tras la 2ª investigación?',
+        opciones: ['🔴 Sin verificar', '🟡 Solo orientativo', '🟢 Verificado con fuente oficial', 'No se menciona LinkedIn'],
         correcta: 2,
-        explicacion: 'InfoJobs e Indeed tienen datos verificados con fuente oficial 🟢. LinkedIn no aportó datos con fuente primaria en esta investigación y queda como 🔴.'
+        explicacion: 'LinkedIn fue verificado en la 2ª investigación con la web oficial de LinkedIn Jobs y el Centro de Ayuda. Volumen, alertas gratis y filtro nativo de modalidad están confirmados 🟢.'
       },
       {
-        pregunta: '¿Qué dato de Indeed quedó descartado (🔴) en la investigación?',
+        pregunta: '¿Qué dato de LinkedIn sigue marcado como 🔴?',
         opciones: [
-          'Que Indeed es gratuito para el candidato',
-          'Que Indeed cubre el puesto de Construction Manager en Madrid',
-          'La cifra de "~1.000 ofertas de construcción en España"',
-          'Que Indeed agrega ofertas de muchas webs'
+          'Que LinkedIn publica los 4 puestos en Madrid',
+          'Que las alertas son gratuitas',
+          'El precio exacto de LinkedIn Premium en España',
+          'Que tiene filtro nativo de modalidad'
         ],
         correcta: 2,
-        explicacion: 'La cifra "~1.000 ofertas" no pudo contrastarse y fue refutada (voto 0-3). Lo verificado es que Indeed existe, es gratis y cubre los 4 puestos.'
+        explicacion: 'El precio exacto de LinkedIn Premium en España (2025-2026) no se pudo verificar en fuente oficial. Queda 🔴. Los filtros y alertas gratuitas sí están verificados 🟢.'
       },
       {
         pregunta: '¿Cuánto paga el candidato por registrarse en InfoJobs?',
@@ -218,6 +232,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         items: [
           'Marca de PageGroup (fundada en Reino Unido en 1976, cotiza en la Bolsa de Londres, más de 5.500 empleados, 150 oficinas en 35 países). 🟢',
           'División específica: "Inmobiliaria y Construcción" (Property, Construction y Facilities Management). 🟢 oficial.',
+          'Sección/vertical FM dedicada verificada en michaelpage.es/jobs/facility-management. 🟢',
           'Cubre los 4 puestos explícitamente: Construction Manager, Project Manager, Jefe de Producción, Jefe de Obra y Facility Manager. 🟢',
           'Volumen (snapshot 29/05/2026): 123 ofertas de "manager" en España; 12 puestos de PM, 5 en Madrid. 🟡 cambia a diario.',
           'Coste para el candidato: gratis. 🟢',
@@ -241,7 +256,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         tipo: 'caja',
         tipoCaja: 'cliente',
         titulo: 'La guía salarial de Hays es tu arma para negociar',
-        texto: 'Antes de cualquier entrevista, descarga la guía salarial de Hays de tu puesto. Así pides una cifra de mercado con datos, no a ojo.'
+        texto: 'Antes de cualquier entrevista, descarga la guía salarial de Hays de tu puesto en guiasalarial.hays.es. Así pides una cifra de mercado con datos, no a ojo.'
       },
       {
         tipo: 'titulo',
@@ -252,7 +267,8 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         items: [
           'Cubre el perfil "Construction Project Manager": supervisa el progreso de las obras desde la planificación hasta la finalización. 🟢 oficial.',
           'Listados vivos en Madrid verificados en mayo de 2026. 🟢',
-          'La división "Randstad Professional para construcción" como marca formal: NO confirmada. 🔴 voto 1-2.'
+          'La división "Randstad Professional para construcción" como marca formal: NO confirmada. 🔴 voto 1-2.',
+          'Filtro de modalidad en cazatalentos (Michael Page, Hays): NO verificado. 🔴'
         ]
       },
       {
@@ -272,8 +288,8 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         reverso: 'Para negociar sueldo con datos reales del mercado. Hays publica guías por puesto (PM, FM, JP, Jefe de Obra) fechadas 2025-2026. Descárgala antes de cualquier entrevista. 🟢'
       },
       {
-        frente: '¿Qué tienen en común Michael Page, Hays y Randstad para el candidato?',
-        reverso: 'Son gratuitos para el candidato. La empresa contratante paga los honorarios de la consultora de selección.'
+        frente: '¿Qué tiene Michael Page que lo hace especialmente útil para Facility Manager?',
+        reverso: 'Tiene una sección/vertical FM dedicada (michaelpage.es/jobs/facility-management), verificada 🟢. Junto con LinkedIn (~75 FM en Madrid), es la primera parada para buscar FM.'
       }
     ],
     preguntas: [
@@ -286,7 +302,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
           'Finanzas y Banca'
         ],
         correcta: 1,
-        explicacion: 'Michael Page tiene la división "Inmobiliaria y Construcción (Property, Construction y Facilities Management)". Cubre los 4 puestos objetivo de forma explícita. 🟢'
+        explicacion: 'Michael Page tiene la división "Inmobiliaria y Construcción (Property, Construction y Facilities Management)". Cubre los 4 puestos objetivo de forma explícita. Además tiene vertical FM dedicada. 🟢'
       },
       {
         pregunta: '¿Cuál de estas consultoras publica guías salariales por puesto (FM, PM, JP) fechadas en 2025-2026?',
@@ -295,15 +311,15 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         explicacion: 'Hays publica guías salariales por perfil en guiasalarial.hays.es. Es la fuente más fiable para saber cuánto pedir en tu puesto. 🟢'
       },
       {
-        pregunta: '¿Qué dato sobre Randstad quedó sin confirmar (🔴)?',
+        pregunta: '¿El filtro de modalidad (híbrido/presencial) está verificado en los cazatalentos?',
         opciones: [
-          'Que Randstad opera en España',
-          'Que cubre el perfil de Construction Project Manager',
-          'La existencia de una división formal "Randstad Professional para construcción"',
-          'Que tiene listados en Madrid'
+          'Sí, está verificado en Michael Page y Hays',
+          'Sí, en Randstad',
+          'No, no se pudo verificar en ningún cazatalentos',
+          'Sí, solo en Robert Walters'
         ],
         correcta: 2,
-        explicacion: 'Lo que no se confirmó (voto 1-2) es que Randstad tenga una división con ese nombre de marca concreto. Lo verificado es que sí cubre el perfil PM de construcción y tiene listados en Madrid. 🟢'
+        explicacion: 'El filtro de modalidad en cazatalentos (Michael Page, Hays) NO se verificó. Queda 🔴. Sí está verificado en LinkedIn e InfoJobs, pero no en las consultoras de selección.'
       }
     ]
   },
@@ -409,7 +425,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     bloques: [
       {
         tipo: 'parrafo',
-        texto: 'Tu colegio profesional (COAATM) tiene bolsa de empleo específica para Arquitectos Técnicos. Requiere estar colegiado. Y hay tres organizaciones del sector que no sirven para buscar empleo: te ahorra el tiempo mirarlas.'
+        texto: 'Tu colegio profesional (COAATM) tiene bolsa de empleo específica para Arquitectos Técnicos. Requiere estar colegiado. La 2ª investigación descartó Tecnoempleo (solo IT) y añadió el empleo público de la Comunidad de Madrid.'
       },
       {
         tipo: 'titulo',
@@ -444,14 +460,28 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
       },
       {
         tipo: 'titulo',
-        texto: '❌ Tres organizaciones que NO son bolsas de empleo'
+        texto: '❌ Organizaciones que NO son bolsas de empleo'
       },
       {
         tipo: 'lista',
         items: [
           'IFMA Spain: asociación de Facility Management. Tiene comisiones, formación, revista y networking. NO tiene bolsa de empleo. Verificado 3-0. 🟢',
           'MUSAAT: mutua de seguros de Responsabilidad Civil del arquitecto técnico. No es empleo. Verificado 3-0. 🟢',
-          'CGATE: Consejo General de la Arquitectura Técnica. Su "Ventanilla Única" es un directorio para que clientes te contraten, no una bolsa de empleo para candidatos. Verificado 3-0. 🟢'
+          'CGATE: Consejo General de la Arquitectura Técnica. Su "Ventanilla Única" es un directorio para que clientes te contraten, no una bolsa de empleo. Verificado 3-0. 🟢',
+          'Tecnoempleo: portal EXCLUSIVO de Informática y Telecomunicaciones. "Facility manager" y "construction manager" dan 0 resultados. El "Jefe de Proyecto" que aparece es de IT. DESCARTADO. 🟢'
+        ]
+      },
+      {
+        tipo: 'titulo',
+        texto: '🟢 Empleo público · Comunidad de Madrid'
+      },
+      {
+        tipo: 'lista',
+        items: [
+          'Sede Comunidad de Madrid: ofertas de empleo de Arquitectura Técnica (oposiciones) en sede.comunidad.madrid/oferta-empleo. 🟢 oficial.',
+          'Bolsas de empleo temporal en la Administración autonómica. 🟢 oficial.',
+          'Ayuntamiento de Madrid: convoca plazas de Arquitecto/a Técnico/a. 🟡 portal a veces inaccesible, conviene confirmar.',
+          'Para ti: estabilidad máxima y horario compatible con terapia, pero proceso lento (oposición). Buena vía paralela, no sustituye a la privada.'
         ]
       },
       {
@@ -464,34 +494,34 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         tipo: 'caja',
         tipoCaja: 'cliente',
         titulo: 'Recomendación para Rubén',
-        texto: 'Colégiate y activa la bolsa del COAATM (es tu casa profesional y suma). Pero no esperes de ahí los puestos senior. Olvida MUSAAT y CGATE para buscar empleo. IFMA Spain, solo para hacer contactos en el sector FM.'
+        texto: 'Colégiate y activa la bolsa del COAATM (es tu casa profesional y suma). Pero no esperes de ahí los puestos senior. Olvida Tecnoempleo, MUSAAT y CGATE para buscar empleo. IFMA Spain, solo para hacer contactos en el sector FM. Si buscas estabilidad, mira la Comunidad de Madrid (proceso lento pero horario compatible con terapia).'
       }
     ],
     flashcards: [
       {
-        frente: '¿Por qué la bolsa del COAATM no sirve para puestos senior CM/FM/PM?',
-        reverso: 'Tiende a publicar roles AT genéricos y junior. Para puestos de dirección senior, los canales más efectivos son LinkedIn, Hays y Michael Page. 🟡'
+        frente: '¿Por qué Tecnoempleo fue descartado en la 2ª investigación?',
+        reverso: 'Porque es un portal exclusivo de Informática y Telecomunicaciones. "Facility manager" y "construction manager" dan 0 resultados. El "Jefe de Proyecto" que aparece es de IT, no de construcción. 🟢 confirmado.'
       },
       {
-        frente: '¿Cuáles son las tres organizaciones que NO tienen bolsa de empleo?',
-        reverso: 'IFMA Spain (solo formación y networking FM), MUSAAT (mutua de seguros) y CGATE (directorio para clientes). Verificado con voto 3-0. 🟢'
+        frente: '¿Cuáles son las organizaciones que NO tienen bolsa de empleo?',
+        reverso: 'IFMA Spain (solo formación y networking FM), MUSAAT (mutua de seguros), CGATE (directorio para clientes) y Tecnoempleo (solo IT). Verificado con voto 3-0. 🟢'
       },
       {
-        frente: '¿Para qué sí sirve IFMA Spain aunque no tenga bolsa de empleo?',
-        reverso: 'Para networking y formación en Facility Management. Útil para conocer gente del sector FM. No para encontrar ofertas directamente.'
+        frente: '¿Qué añadió la 2ª investigación sobre empleo público?',
+        reverso: 'La Comunidad de Madrid tiene sede oficial con ofertas de Arquitectura Técnica y bolsas de empleo temporal 🟢. El Ayuntamiento de Madrid queda 🟡 (portal inaccesible en vivo). Proceso lento, pero horario compatible con terapia.'
       }
     ],
     preguntas: [
       {
-        pregunta: '¿Qué es MUSAAT?',
+        pregunta: '¿Por qué Tecnoempleo NO sirve para buscar empleo de FM o CM?',
         opciones: [
-          'El colegio oficial de aparejadores de Madrid',
-          'Una bolsa de empleo para Arquitectos Técnicos',
-          'Una mutua de seguros de Responsabilidad Civil del arquitecto técnico',
-          'Una asociación de Facility Management'
+          'Porque es de pago para candidatos',
+          'Porque solo opera en Barcelona',
+          'Porque es un portal exclusivo de Informática y Telecomunicaciones, con 0 resultados para FM o CM',
+          'Porque exige estar colegiado'
         ],
         correcta: 2,
-        explicacion: 'MUSAAT es una mutua de seguros, no una bolsa de empleo. Buscar trabajo ahí es perder el tiempo. Verificado con voto 3-0. 🟢'
+        explicacion: 'Tecnoempleo es exclusivo de IT/Telecomunicaciones. La búsqueda de "facility manager" y "construction manager" da 0 resultados. Fue descartado en la 2ª investigación. 🟢'
       },
       {
         pregunta: '¿Qué colegio es el tuyo si eres Arquitecto Técnico en Madrid?',
@@ -500,15 +530,15 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         explicacion: 'El COAATM (Colegio Oficial de Aparejadores y Arquitectos Técnicos de Madrid) es el colegio profesional para Arquitectos Técnicos en Madrid. El COAM es para arquitectos superiores.'
       },
       {
-        pregunta: '¿La "Ventanilla Única" del CGATE es una bolsa de empleo?',
+        pregunta: '¿Qué nivel de fiabilidad tiene el empleo público de la Comunidad de Madrid?',
         opciones: [
-          'Sí, la más importante del sector',
-          'No, es un directorio para que clientes contraten al profesional',
-          'Sí, pero solo para colegiados',
-          'No, es un portal de formación'
+          '🔴 No verificado',
+          '🟡 Solo orientativo',
+          '🟢 Verificado con fuentes oficiales (sede.comunidad.madrid)',
+          'No se menciona el empleo público'
         ],
-        correcta: 1,
-        explicacion: 'La Ventanilla Única del CGATE es un directorio para que clientes encuentren al Arquitecto Técnico, no una bolsa donde buscar empleo. Verificado 3-0. 🟢'
+        correcta: 2,
+        explicacion: 'La Comunidad de Madrid está verificada 🟢 con sede.comunidad.madrid y comunidad.madrid. El Ayuntamiento de Madrid queda 🟡 (portal no cargó en vivo). Fue añadido en la 2ª investigación.'
       }
     ]
   },
@@ -517,26 +547,26 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     bloques: [
       {
         tipo: 'parrafo',
-        texto: 'No todas las plataformas sirven igual para los 4 puestos. Esta tabla maestra te dice qué canal usar según el rol que persigues, con el nivel de fiabilidad de cada recomendación.'
+        texto: 'No todas las plataformas sirven igual para los 4 puestos. Esta tabla maestra actualizada (2ª investigación) te dice qué canal usar según el rol que persigues, con el nivel de fiabilidad de cada recomendación.'
       },
       {
         tipo: 'titulo',
-        texto: '📊 Tabla maestra por puesto'
+        texto: '📊 Tabla maestra por puesto (actualizada)'
       },
       {
         tipo: 'lista',
         items: [
-          'Construction Manager: Michael Page 🟢 + Hays 🟢 + LinkedIn 🔴*. Canal de cazatalentos, dirección de obra/proyecto. Madrid concentra las ofertas en Michael Page.',
-          'Facility Manager: Michael Page 🟢 + Hays 🟢 + InfoJobs 🟢. Ambas consultoras citan FM de forma explícita. IFMA Spain solo para networking, no da ofertas.',
-          'Project Manager: Michael Page 🟢 + InfoJobs 🟢 + Randstad 🟢. Michael Page tuvo 12 PM en España (5 en Madrid). InfoJobs tiene categoría PM propia.',
-          'Jefe de Producción: InfoJobs 🟢 + Construyendoempleo 🟢 + Michael Page 🟢. InfoJobs tiene categoría propia (64 ofertas el 29/05/2026). Perfil de obra: encaja en el portal sectorial.'
+          'Construction Manager: LinkedIn 🟢 + Michael Page 🟢 + Hays 🟢. Dirección de obra/proyecto: cazatalentos + LinkedIn (filtro híbrido). Madrid concentra ofertas.',
+          'Facility Manager: LinkedIn 🟢 + Michael Page 🟢 + Hays 🟢. LinkedIn ~75 FM en Madrid (snapshot 🟡); Michael Page tiene vertical FM dedicada. Empresas FM: Centauro, Data4, Prosegur, Savills, MVGM, Clikalia.',
+          'Project Manager: LinkedIn 🟢 + Michael Page 🟢 + InfoJobs 🟢. LinkedIn 1000+ PM en Madrid (incluye IT, 🟡); Michael Page concentra PM; InfoJobs tiene categoría propia.',
+          'Jefe de Producción: InfoJobs 🟢 + Construyendoempleo 🟢 + Michael Page 🟢. InfoJobs categoría propia (64 ofertas el 29/05/2026 🟡). Perfil de obra: encaja en el portal sectorial.'
         ]
       },
       {
         tipo: 'caja',
-        tipoCaja: 'dato',
-        titulo: '* LinkedIn y Facility Manager: sin cifras verificadas 🔴',
-        texto: 'LinkedIn aparece como canal por lógica del sector, pero sus cifras no se contrastaron. Y el volumen específico de Facility Manager en Madrid tampoco se cuantificó en esta investigación. No significa que haya pocas ofertas FM: significa que falta medirlo.'
+        tipoCaja: 'truco',
+        titulo: 'Facility Manager: LinkedIn es tu primera parada',
+        texto: 'La 2ª investigación confirmó que FM se concentra en LinkedIn (~75 Madrid, snapshot 🟡) y en Michael Page (vertical FM dedicada). Empresas que publican FM: Centauro, Data4, Prosegur, Savills, MVGM, Clikalia. Para FM, empieza por LinkedIn + Michael Page.'
       },
       {
         tipo: 'titulo',
@@ -547,7 +577,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         items: [
           '1. InfoJobs — generalista, alto volumen. 🟢',
           '2. Indeed — generalista + alertas por email. 🟢',
-          '3. Michael Page — cazatalentos, construcción. 🟢',
+          '3. Michael Page — cazatalentos, construcción + vertical FM. 🟢',
           '4. Hays — cazatalentos + guía salarial. 🟢',
           '5. Construyendoempleo — sectorial público (FLC/SEPE). 🟢'
         ]
@@ -559,7 +589,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
       {
         tipo: 'lista',
         items: [
-          'LinkedIn 🔴: perfil + alertas (estándar del sector, cifras no verificadas aquí).',
+          'LinkedIn 🟢: perfil + alertas + filtro nativo híbrido/remoto (verificado en 2ª investigación). Para FM es primer nivel.',
           'COAATM 🟢: bolsa del colegio, más útil para roles AT de entrada.',
           'IFMA Spain 🟢: solo networking y formación FM (no da ofertas).'
         ]
@@ -568,7 +598,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         tipo: 'caja',
         tipoCaja: 'cliente',
         titulo: 'Recomendación para Rubén',
-        texto: 'Para FM (objetivo nº1): combina Michael Page + Hays (dirección senior) con InfoJobs (volumen). Para Jefe de Producción como suelo: InfoJobs + Construyendoempleo. El filtro de modalidad híbrida/remota no se verificó por plataforma; busca por la palabra "híbrido" en el texto y pregunta en la entrevista.'
+        texto: 'Para FM (objetivo nº1): LinkedIn (más volumen + filtro híbrido) + Michael Page + Hays (dirección). Para Jefe de Producción como suelo: InfoJobs + Construyendoempleo. Filtro de modalidad nativo confirmado en LinkedIn e InfoJobs. Cazatalentos: filtro de modalidad sin verificar 🔴 (pregunta en la entrevista).'
       }
     ],
     flashcards: [
@@ -577,12 +607,12 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         reverso: 'InfoJobs, Indeed, Michael Page, Hays y Construyendoempleo. Todas verificadas con fuente oficial. 🟢'
       },
       {
-        frente: '¿Qué plataforma es mejor para Jefe de Producción como suelo?',
-        reverso: 'InfoJobs (categoría propia, 64 ofertas el 29/05/2026) y Construyendoempleo (portal sectorial de obra). Ambas 🟢.'
+        frente: '¿Qué plataformas son TOP para Facility Manager y qué empresas publican FM?',
+        reverso: 'LinkedIn (~75 FM Madrid 🟡) + Michael Page (vertical FM dedicada 🟢). Empresas FM: Centauro, Data4, Prosegur, Savills, MVGM, Clikalia.'
       },
       {
-        frente: '¿Por qué el volumen de Facility Manager no tiene cifra confirmada?',
-        reverso: 'Porque no se cuantificó en esta investigación. No significa que haya pocas ofertas FM: es un pendiente de la segunda investigación. 🔴'
+        frente: '¿Qué plataforma es mejor para Jefe de Producción como suelo?',
+        reverso: 'InfoJobs (categoría propia, 64 ofertas el 29/05/2026 🟡) y Construyendoempleo (portal sectorial de obra). Ambas 🟢.'
       }
     ],
     preguntas: [
@@ -590,12 +620,12 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         pregunta: '¿Qué plataformas se recomiendan principalmente para Facility Manager?',
         opciones: [
           'Construyendoempleo y COAATM',
-          'Michael Page, Hays e InfoJobs',
-          'LinkedIn y IFMA Spain',
+          'LinkedIn y Michael Page (con vertical FM dedicada)',
+          'Solo IFMA Spain',
           'Indeed y Robert Walters'
         ],
         correcta: 1,
-        explicacion: 'Para FM se recomiendan Michael Page y Hays (citan FM de forma explícita, nivel dirección) más InfoJobs (volumen generalista). 🟢'
+        explicacion: 'Para FM se recomiendan LinkedIn (~75 FM en Madrid, snapshot 🟡) y Michael Page (vertical FM dedicada 🟢). Empresas que publican FM: Centauro, Data4, Prosegur, Savills, MVGM, Clikalia.'
       },
       {
         pregunta: '¿Cuántas ofertas de Project Manager tenía Michael Page en Madrid el 29/05/2026?',
@@ -616,7 +646,7 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     bloques: [
       {
         tipo: 'parrafo',
-        texto: 'Saber dónde buscar no sirve si no lo conviertes en rutina. Este es el plan concreto adaptado a tu situación: Madrid, con terapia 2 días a la semana entre las 17 y las 19 horas.'
+        texto: 'Saber dónde buscar no sirve si no lo conviertes en rutina. Este es el plan concreto adaptado a tu situación: Madrid, con terapia 2 días a la semana entre las 17 y las 19 horas. Los filtros de modalidad ya están verificados en las plataformas clave.'
       },
       {
         tipo: 'titulo',
@@ -625,13 +655,27 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
       {
         tipo: 'lista',
         items: [
-          '1. InfoJobs: alta + CV + alerta con filtro Madrid.',
+          '1. InfoJobs: alta + CV + alerta con filtro Madrid + filtro modalidad "Híbrido".',
           '2. Indeed: alta + sube CV + alertas por cada puesto.',
           '3. Michael Page: sube CV + selecciona área Inmobiliaria y Construcción.',
           '4. Hays: sube CV + descarga la guía salarial de tu puesto.',
           '5. Construyendoempleo: alta como candidato + provincia Madrid.',
-          '6. LinkedIn: perfil al día + activa "Abierto a ofertas" en modo privado.',
+          '6. LinkedIn: perfil al día + activa "Abierto a ofertas" (modo privado) + alertas con filtro Híbrido + municipio Madrid.',
           '7. COAATM: activa la Bolsa de Trabajo en el Portal del Colegiado.'
+        ]
+      },
+      {
+        tipo: 'titulo',
+        texto: '🔍 El filtro híbrido/remoto (verificado en la 2ª investigación) 🟢'
+      },
+      {
+        tipo: 'lista',
+        items: [
+          'LinkedIn: NATIVO Híbrido / Presencial / En remoto + por municipio (Madrid, Getafe...). 🟢 oficial.',
+          'InfoJobs: NATIVO "Presencial/Teletrabajo" con opciones Solo teletrabajo / Híbrido / Presencial. 🟢 ayuda oficial.',
+          'Indeed: filtro "Remote" / por ubicación. Versión global confirmada. 🟡 en es.indeed por URL/ubicación.',
+          'Cazatalentos (Michael Page, Hays): filtro de modalidad explícito NO verificado. 🔴',
+          'Matiz honesto: el filtro funciona, pero algunos empleadores etiquetan mal. Confirma siempre en la entrevista.'
         ]
       },
       {
@@ -650,21 +694,15 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
       },
       {
         tipo: 'caja',
-        tipoCaja: 'dato',
-        titulo: 'Filtro híbrido/remoto: sin verificar por plataforma 🔴',
-        texto: 'En esta investigación NO se verificó qué portales filtran correctamente por modalidad (presencial, híbrido, remoto). Es un punto pendiente. Lo que sí está confirmado: todos filtran por provincia (Madrid). 🟢 Táctica mientras tanto: busca por las palabras "híbrido" o "teletrabajo" en el campo de texto y pregunta la flexibilidad en la entrevista.'
-      },
-      {
-        tipo: 'caja',
         tipoCaja: 'aviso',
         titulo: 'Errores que evitar',
-        texto: 'No busques empleo en MUSAAT, CGATE ni IFMA (no tienen ofertas). No te fíes de cifras de volumen como si fueran fijas (son 🟡, cambian a diario). No ignores los cazatalentos pensando que son de pago (para ti son gratis). No vayas a negociar sueldo sin descargar antes la guía salarial de Hays.'
+        texto: 'No busques empleo en Tecnoempleo (solo IT), MUSAAT, CGATE ni IFMA (no tienen ofertas). No te fíes de cifras de volumen como si fueran fijas (son 🟡, cambian a diario). No ignores los cazatalentos pensando que son de pago (para ti son gratis). No vayas a negociar sueldo sin descargar antes la guía salarial de Hays.'
       },
       {
         tipo: 'caja',
         tipoCaja: 'truco',
         titulo: 'Las alertas trabajan por ti',
-        texto: 'Pon alertas por email en las 5 plataformas TOP. Así no tienes que entrar a buscar: las ofertas llegan a tu bandeja y tú solo decides. Con 30 min/día cubres el 90% del mercado real de tu perfil en Madrid.'
+        texto: 'Pon alertas por email en las 5 plataformas TOP + LinkedIn. Así no tienes que entrar a buscar: las ofertas llegan a tu bandeja y tú solo decides. Con 30 min/día cubres el 90% del mercado real de tu perfil en Madrid.'
       }
     ],
     flashcards: [
@@ -673,8 +711,8 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         reverso: 'Entre 1 y 2 horas en total, haciéndolo de forma seguida. Es una inversión de una sola vez.'
       },
       {
-        frente: '¿El filtro de modalidad híbrida/remota está verificado por plataforma?',
-        reverso: 'No. 🔴 Es un punto pendiente de contrastar. Lo verificado es que todos filtran por provincia (Madrid). 🟢 Táctica: busca la palabra "híbrido" en el texto y pregunta en la entrevista.'
+        frente: '¿El filtro de modalidad híbrida/remota está verificado? ¿En cuáles?',
+        reverso: 'Sí, en LinkedIn 🟢 (nativo: Híbrido/Presencial/En remoto + municipio) e InfoJobs 🟢 (nativo: Solo teletrabajo/Híbrido/Presencial). En cazatalentos: NO verificado 🔴. Confirma siempre en la entrevista.'
       },
       {
         frente: '¿Cuánto tiempo al día requiere la rutina semanal?',
@@ -691,18 +729,18 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
           'El informe anual de PageGroup'
         ],
         correcta: 2,
-        explicacion: 'Hays publica guías salariales por puesto fechadas 2025-2026. Descárgala antes de la entrevista para pedir una cifra de mercado con datos reales. 🟢'
+        explicacion: 'Hays publica guías salariales por puesto fechadas 2025-2026 en guiasalarial.hays.es. Descárgala antes de la entrevista para pedir una cifra de mercado con datos reales. 🟢'
       },
       {
-        pregunta: '¿Qué filtro está confirmado como disponible en TODOS los portales?',
+        pregunta: '¿En qué plataformas está confirmado el filtro nativo de modalidad (híbrido/remoto)?',
         opciones: [
-          'Filtro por modalidad (híbrido/remoto)',
-          'Filtro por salario mínimo',
-          'Filtro por provincia (Madrid)',
-          'Filtro por nivel de inglés requerido'
+          'Solo en Indeed',
+          'En LinkedIn e InfoJobs',
+          'En Michael Page y Hays',
+          'En todos los portales por igual'
         ],
-        correcta: 2,
-        explicacion: 'El filtro por provincia (Madrid) está verificado como disponible en todos los portales. 🟢 El filtro de modalidad no se verificó plataforma a plataforma. 🔴'
+        correcta: 1,
+        explicacion: 'El filtro nativo de modalidad está verificado 🟢 en LinkedIn (Híbrido/Presencial/En remoto) e InfoJobs (Solo teletrabajo/Híbrido/Presencial). En cazatalentos no se verificó 🔴.'
       },
       {
         pregunta: '¿Con qué frecuencia hay que revisar las plataformas según la rutina propuesta?',
@@ -722,21 +760,18 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     bloques: [
       {
         tipo: 'parrafo',
-        texto: 'Aquí tienes de dónde sale cada dato y cómo de fiable es. Transparencia total: se listan los datos confirmados, los orientativos y los descartados.'
+        texto: 'Aquí tienes de dónde sale cada dato y cómo de fiable es. Transparencia total: se listan los datos confirmados, los orientativos y los descartados. Se hicieron 2 investigaciones.'
       },
       {
         tipo: 'titulo',
-        texto: '🔬 Métricas de verificación'
+        texto: '🔬 Métricas de verificación (2 investigaciones)'
       },
       {
         tipo: 'lista',
         items: [
-          'Ángulos de búsqueda: 5 (generalistas, especializados, cazatalentos, colegios, empleo público).',
-          'Fuentes consultadas: 23.',
-          'Datos extraídos: 85.',
-          'Datos sometidos a verificación: 25.',
-          'Confirmados: 21.',
-          'Descartados: 4.',
+          '1ª investigación: 5 ángulos, 23 fuentes, 25 datos → 21 confirmados, 4 descartados.',
+          '2ª investigación (29/05/2026): 5 ángulos, 22 fuentes, 25 datos → 22 confirmados, 3 descartados.',
+          'La 2ª cerró los pendientes: LinkedIn, filtros de modalidad, volumen FM, Tecnoempleo y empleo público.',
           'Método: triple voto adversarial (3 revisores intentan refutar; se necesitan 2 de 3 para descartar).'
         ]
       },
@@ -747,15 +782,20 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
       {
         tipo: 'lista',
         items: [
-          'infojobs.net — categorías PM y Jefe de Producción, ofertas de edificación.',
+          'infojobs.net — categorías PM y Jefe de Producción, filtro nativo de modalidad.',
           'es.indeed.com + support.indeed.com — gratuito para candidato, CM en Madrid.',
-          'michaelpage.es — división Inmobiliaria y Construcción, 4 roles, Madrid.',
+          'michaelpage.es — división Inmobiliaria y Construcción, 4 roles, vertical FM.',
           'hays.es + guiasalarial.hays.es — división construcción, FM/PM, guías salariales.',
           'randstad.es — perfil Construction Project Manager, Madrid.',
           'construyendoempleo.com + fundacionlaboral.org — portal sectorial FLC, respaldo SEPE.',
           'aparejadoresmadrid.es — COAATM, Bolsa de Trabajo, acceso colegiados.',
           'coam.org — COAM bolsa (arquitectos superiores).',
-          'ifma-spain.org, musaat.es, cgate.es — confirman que NO son bolsas de empleo.'
+          'ifma-spain.org, musaat.es, cgate.es, tecnoempleo.com — confirman que NO son bolsas de su sector.',
+          'es.linkedin.com/jobs + Centro de Ayuda LinkedIn — volumen PM/FM Madrid, alertas gratis, filtro nativo de modalidad.',
+          'premium.linkedin.com/careers/compare-plans — qué añade LinkedIn Premium (InMails, insights IA).',
+          'indeed.com (career-advice) + orientacion-laboral.infojobs.net — filtros nativos de modalidad.',
+          'michaelpage.es/jobs/facility-management — vertical FM dedicada en cazatalentos.',
+          'sede.comunidad.madrid + comunidad.madrid — empleo público Arquitectura Técnica + bolsas temporales.'
         ]
       },
       {
@@ -778,31 +818,44 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
         items: [
           '"InfoJobs está dominado por la categoría inmobiliaria/construcción" — voto 0-3. No se pudo confirmar el ranking de categorías.',
           '"Indeed tiene ~1.000 ofertas de construcción en España" — voto 0-3. Cifra no contrastable.',
-          '"Randstad tiene división formal Randstad Professional para construcción" — voto 1-2. Sin confirmación clara de la marca de división.',
-          '"La bolsa del COAATM es la única especializada en Madrid (como hecho)" — voto 0-3. Es autodescripción del colegio, no auditada por terceros.'
+          '"Randstad tiene división formal Randstad Professional para construcción" — voto 1-2. Sin confirmación clara de la marca de división.'
+        ]
+      },
+      {
+        tipo: 'titulo',
+        texto: '✅ Resuelto en la 2ª investigación'
+      },
+      {
+        tipo: 'lista',
+        items: [
+          '✅ LinkedIn: verificado (volumen 🟡, alertas gratis 🟢, filtro nativo de modalidad 🟢).',
+          '✅ Filtro híbrido/remoto: confirmado nativo en LinkedIn e InfoJobs. 🟢',
+          '✅ Volumen Facility Manager: localizado (LinkedIn ~75 Madrid 🟡 + Michael Page vertical FM 🟢).',
+          '✅ Tecnoempleo: descartado definitivamente (solo IT, 0 resultados FM/CM).',
+          '✅ Empleo público Comunidad de Madrid: añadido (sede.comunidad.madrid). 🟢'
         ]
       },
       {
         tipo: 'caja',
         tipoCaja: 'dato',
-        titulo: 'Pendientes para la segunda investigación 🔴',
-        texto: 'LinkedIn (volumen real, filtros, coste). Filtro híbrido/remoto por plataforma. Volumen específico de FM en Madrid. Portales adicionales: Tecnoempleo, Construible, Idealista empleo y empleo público (oposiciones de Arquitecto Técnico, por ejemplo en el Ayuntamiento de Madrid).'
+        titulo: 'Lo que sigue pendiente 🔴',
+        texto: 'Precio exacto de LinkedIn Premium en España (2025-2026): no verificado. Los insights con IA podrían no estar disponibles en España. Portales no investigados: Construible, Idealista empleo. Buscador de oposiciones del Ayuntamiento de Madrid: portal no cargó en vivo (la Comunidad de Madrid sí está verificada 🟢).'
       },
       {
         tipo: 'caja',
         tipoCaja: 'aviso',
         titulo: 'Las cifras de ofertas son fotos, no verdades fijas',
-        texto: 'Los recuentos de Michael Page (123/12/5) e InfoJobs (64) son snapshots del 29/05/2026. Cambian a diario. Lo estable es que el portal existe y cubre tu sector. La cifra exacta, no.'
+        texto: 'Los recuentos de Michael Page (123/12/5), InfoJobs (64) y LinkedIn (~75 FM, 1000+ PM) son snapshots del 29/05/2026. Cambian a diario. Lo estable es que el portal existe y cubre tu sector. La cifra exacta, no.'
       }
     ],
     flashcards: [
       {
-        frente: '¿Cuántos datos se descartaron y por qué?',
-        reverso: '4 datos descartados: el ranking de categorías de InfoJobs (0-3), las 1.000 ofertas de Indeed (0-3), la división Randstad Professional (1-2) y el dato del COAATM como "único especializado" (0-3 por ser autodescripción no auditada).'
+        frente: '¿Cuántos datos se descartaron en total entre las 2 investigaciones?',
+        reverso: '1ª: 4 datos descartados. 2ª: se recuperó 1 (COAATM quedó como 🟡 autodescripción) → 3 descartados. Los 3 definitivos: ranking InfoJobs (0-3), 1.000 ofertas Indeed (0-3) y división Randstad Professional (1-2).'
       },
       {
-        frente: '¿Qué tres aspectos de LinkedIn quedaron pendientes de contrastar?',
-        reverso: 'Volumen real de FM/CM/PM/JP en Madrid, qué filtros ofrece y cuánto cuesta el plan Premium. Todo queda marcado como 🔴 en este informe.'
+        frente: '¿Qué cerró la 2ª investigación?',
+        reverso: 'Cerró 5 pendientes: LinkedIn verificado 🟢, filtros de modalidad confirmados en LinkedIn e InfoJobs 🟢, volumen FM localizado (~75 Madrid LinkedIn + Michael Page vertical 🟡/🟢), Tecnoempleo descartado, empleo público Comunidad de Madrid añadido 🟢.'
       },
       {
         frente: '¿Por qué los recuentos de ofertas son 🟡 y no 🟢?',
@@ -811,32 +864,32 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     ],
     preguntas: [
       {
-        pregunta: '¿Cuántos datos de los 25 verificados no superaron la verificación?',
-        opciones: ['1', '4', '10', '21'],
+        pregunta: '¿Cuántas fuentes se consultaron en la 2ª investigación?',
+        opciones: ['5 fuentes', '22 fuentes', '25 fuentes', '45 fuentes'],
         correcta: 1,
-        explicacion: '4 datos fueron descartados. Los otros 21 quedaron confirmados. El método fue triple voto adversarial: se necesitaban 2 de 3 votos para descartar un dato.'
+        explicacion: 'La 2ª investigación consultó 22 fuentes (la 1ª fueron 23). De 25 datos verificados, 22 quedaron confirmados y 3 descartados. Método: triple voto adversarial.'
       },
       {
-        pregunta: '¿Por qué el dato "COAATM es la única bolsa especializada en Madrid" es 🟡 y no 🟢?',
+        pregunta: '¿Qué sigue pendiente de verificar tras la 2ª investigación?',
         opciones: [
-          'Porque el COAATM no tiene bolsa de empleo',
-          'Porque es una autodescripción del propio colegio, no auditada por terceros',
-          'Porque está verificado pero cambia con frecuencia',
-          'Porque solo aplica a arquitectos superiores'
+          'LinkedIn y sus filtros',
+          'El precio exacto de LinkedIn Premium en España y los portales Construible/Idealista',
+          'Si Michael Page tiene ofertas FM',
+          'Si Construyendoempleo existe'
         ],
         correcta: 1,
-        explicacion: 'El dato procede de la autodescripción del propio colegio. No ha sido auditado ni contrastado por terceros, así que no puede tratarse como hecho verificado. Se marcó con voto 0-3 (descartado como "hecho").'
+        explicacion: 'Siguen pendientes 🔴: precio exacto de LinkedIn Premium en España, portales Construible e Idealista empleo, y el buscador del Ayuntamiento de Madrid (la Comunidad de Madrid sí está verificada 🟢).'
       },
       {
-        pregunta: '¿Qué aspecto del filtro híbrido/remoto está verificado como disponible en todos los portales?',
+        pregunta: '¿Cuál es el nivel de fiabilidad del filtro nativo de modalidad en LinkedIn e InfoJobs?',
         opciones: [
-          'El filtro de modalidad (presencial/híbrido/remoto)',
-          'El filtro por tipo de contrato',
-          'El filtro por provincia (Madrid)',
-          'El filtro por salario mínimo'
+          '🔴 No verificado',
+          '🟡 Solo orientativo',
+          '🟢 Verificado con fuentes oficiales',
+          'No tiene filtro de modalidad'
         ],
         correcta: 2,
-        explicacion: 'El filtro por provincia (Madrid) está verificado como disponible en todos los portales. 🟢 El filtro de modalidad (híbrido/remoto) es pendiente: no se verificó plataforma a plataforma. 🔴'
+        explicacion: 'El filtro nativo de modalidad en LinkedIn (Híbrido/Presencial/En remoto) e InfoJobs (Solo teletrabajo/Híbrido/Presencial) fue verificado 🟢 con las webs y ayudas oficiales de ambas plataformas en la 2ª investigación.'
       }
     ]
   },
@@ -845,22 +898,22 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
     bloques: [
       {
         tipo: 'parrafo',
-        texto: 'Síntesis final al estilo de un Trabajo Fin de Grado. Las 7 conclusiones, el plan accionable y las líneas de investigación futura.'
+        texto: 'Síntesis final al estilo de un Trabajo Fin de Grado. Se hicieron 2 investigaciones. LinkedIn pasa a ser plataforma TOP. FM se concentra en LinkedIn + Michael Page. Las cifras y el plan son accionables hoy.'
       },
       {
         tipo: 'titulo',
-        texto: '🎯 Las 7 conclusiones principales'
+        texto: '🎯 Las conclusiones principales'
       },
       {
         tipo: 'lista',
         items: [
           '1. Cinco plataformas cubren el 90% del mercado, todas gratuitas para el candidato: InfoJobs, Indeed, Michael Page, Hays y Construyendoempleo. Verificado con fuente oficial. 🟢',
-          '2. Los cazatalentos son gratuitos para ti y clave para puestos de dirección (CM y FM bien pagados). Las mejores ofertas senior pasan antes por aquí que por los portales abiertos.',
-          '3. Madrid concentra las ofertas: en Michael Page, de 12 PM, 5 estaban en Madrid (la ciudad con más). Tu ubicación juega a favor.',
-          '4. La guía salarial de Hays es tu mejor herramienta para negociar sueldo con datos, no a ciegas.',
-          '5. Tu colegio (COAATM) suma pero no basta: su bolsa tiende a roles AT de entrada; para CM/FM/PM senior usa cazatalentos y LinkedIn.',
-          '6. Tres organizaciones NO sirven para buscar empleo: MUSAAT (aseguradora), CGATE (directorio para clientes) e IFMA Spain (solo networking y formación FM). Verificado 3-0. 🟢',
-          '7. Honestidad sobre límites: LinkedIn, el filtro híbrido/remoto y el volumen exacto de FM no se contrastaron. Están marcados como pendientes, no se presentan como datos ciertos. 🔴'
+          '2. LinkedIn es ahora plataforma TOP para tu perfil: filtro nativo híbrido/remoto + por municipio. Útil para los 4 perfiles. Verificado en la 2ª investigación. 🟢',
+          '3. Los cazatalentos son gratuitos para ti y clave para puestos de dirección (CM y FM bien pagados). Las mejores ofertas senior pasan antes por aquí que por los portales abiertos.',
+          '4. Facility Manager se concentra en LinkedIn (~75 Madrid, snapshot 🟡) y Michael Page (vertical FM dedicada 🟢). Empresas: Centauro, Data4, Prosegur, Savills, MVGM, Clikalia.',
+          '5. Madrid concentra las ofertas: en Michael Page, de 12 PM, 5 estaban en Madrid (la ciudad con más). Tu ubicación juega a favor.',
+          '6. La guía salarial de Hays es tu mejor herramienta para negociar sueldo con datos, no a ciegas.',
+          '7. Tres organizaciones NO sirven para buscar empleo: MUSAAT (aseguradora), CGATE (directorio para clientes) e IFMA Spain (solo networking FM). Tecnoempleo también descartado (solo IT). Verificado. 🟢'
         ]
       },
       {
@@ -870,86 +923,85 @@ export const EMPLEO_DATA: Record<string, ModuloData> = {
       {
         tipo: 'lista',
         items: [
-          'Alta inicial (1-2 horas): registrarte en las 5 plataformas TOP y activar alertas a Madrid.',
-          'Buscar FM (objetivo nº1): Michael Page + Hays (dirección) + InfoJobs (volumen).',
+          'Alta inicial (1-2 horas): registrarte en las 6 plataformas TOP y activar alertas a Madrid.',
+          'Buscar FM (objetivo nº1): LinkedIn (filtro híbrido + ~75 FM Madrid) + Michael Page + Hays (dirección).',
           'Suelo Jefe de Producción: InfoJobs + Construyendoempleo (alto encaje sectorial).',
           'Negociar sueldo: descargar la guía salarial de Hays de tu puesto antes de cada entrevista.',
-          'Compatibilizar terapia: filtrar Madrid + preguntar flexibilidad en la entrevista (la franja 17-19h es innegociable).'
+          'Compatibilizar terapia: usar filtro híbrido nativo en LinkedIn e InfoJobs + preguntar en la entrevista (la franja 17-19h es innegociable).'
         ]
       },
       {
         tipo: 'caja',
         tipoCaja: 'aviso',
         titulo: 'Cuándo NO fiarse de los datos',
-        texto: 'Las cifras de ofertas cambian a diario (🟡). LinkedIn no se verificó aquí (🔴). El filtro híbrido/remoto por plataforma está sin confirmar (🔴). El volumen de FM no se cuantificó (🔴). Nada de esto significa que falten ofertas; significa que falta medirlo.'
+        texto: 'Las cifras de ofertas cambian a diario (🟡). El precio de LinkedIn Premium en España no se verificó (🔴). El filtro de modalidad en cazatalentos no se confirmó (🔴). El buscador del Ayuntamiento de Madrid no cargó en vivo (🟡). Nada de esto significa que falten ofertas; significa que falta medirlo.'
       },
       {
         tipo: 'titulo',
-        texto: '🔭 Líneas futuras (segunda investigación)'
+        texto: '🔭 Líneas futuras (3ª investigación, si la quieres)'
       },
       {
         tipo: 'lista',
         items: [
-          'LinkedIn a fondo: volumen FM/CM/PM/JP en Madrid, filtros y coste Premium vs gratis.',
-          'Filtros de modalidad (presencial/híbrido/remoto) plataforma a plataforma.',
-          'Volumen real de Facility Manager en Madrid por portal.',
-          'Portales no cubiertos: Tecnoempleo, Construible, Idealista empleo y empleo público (oposiciones de Arquitecto Técnico).'
+          'Precio real de LinkedIn Premium en España y si compensa para tu perfil.',
+          'Portales Construible e Idealista empleo (arquitectura/construcción e inmobiliario).',
+          'Buscador de oposiciones del Ayuntamiento de Madrid (la Comunidad ya está verificada).'
         ]
       },
       {
         tipo: 'caja',
         tipoCaja: 'cliente',
         titulo: 'Mensaje final para Rubén',
-        texto: 'Tienes el mapa y la prueba de dónde sale cada dato. Empieza hoy por las 5 plataformas gratis, activa alertas a Madrid y descarga la guía salarial de Hays. Cuando quieras, se lanza la segunda investigación sobre LinkedIn, filtros híbridos y volumen FM. Tú decides.'
+        texto: 'Tienes el mapa y la prueba de dónde sale cada dato. LinkedIn es ya plataforma TOP: úsalo para FM con el filtro híbrido. Empieza hoy por las 6 plataformas gratis, activa alertas a Madrid y descarga la guía salarial de Hays. Cuando quieras, lanzamos la 3ª investigación sobre Construible, Idealista y el precio de Premium. Tú decides.'
       }
     ],
     flashcards: [
       {
         frente: '¿Cuántas plataformas cubren el 90% del mercado y cuáles son?',
-        reverso: 'Cinco: InfoJobs, Indeed, Michael Page, Hays y Construyendoempleo. Todas gratuitas para el candidato y verificadas con fuente oficial. 🟢'
+        reverso: 'Cinco imprescindibles: InfoJobs, Indeed, Michael Page, Hays y Construyendoempleo. Todas gratuitas y verificadas 🟢. LinkedIn se añade como TOP para FM y CM por el filtro híbrido.'
       },
       {
-        frente: '¿Qué conclusión afecta directamente a la negociación de sueldo?',
-        reverso: 'Que Hays publica guías salariales por puesto (FM, PM, JP, Jefe de Obra) fechadas 2025-2026. Es la herramienta más fiable para pedir una cifra de mercado con datos. 🟢'
+        frente: '¿Qué conclusión nueva añade la 2ª investigación sobre LinkedIn?',
+        reverso: 'LinkedIn pasa a plataforma TOP: verificado 🟢 con filtro nativo híbrido/remoto + municipio y ~75 FM en Madrid (🟡 snapshot). Útil para los 4 perfiles. Alertas gratis hasta 20. Precio Premium sigue 🔴.'
       },
       {
-        frente: '¿Cuáles son las 4 líneas pendientes de la segunda investigación?',
-        reverso: '1) LinkedIn a fondo. 2) Filtros de modalidad por plataforma. 3) Volumen real de FM en Madrid. 4) Portales adicionales y empleo público (oposiciones AT).'
+        frente: '¿Cuáles son las líneas pendientes de la 3ª investigación?',
+        reverso: '1) Precio real de LinkedIn Premium en España. 2) Portales Construible e Idealista empleo. 3) Buscador de oposiciones del Ayuntamiento de Madrid (la Comunidad ya está verificada 🟢).'
       }
     ],
     preguntas: [
       {
-        pregunta: '¿Cuál es la principal conclusión del informe sobre los cazatalentos?',
+        pregunta: '¿Cuál es la principal conclusión nueva de la 2ª investigación sobre LinkedIn?',
         opciones: [
-          'Son de pago para el candidato y solo valen para puestos junior',
-          'Son gratuitos para el candidato y clave para puestos de dirección (CM y FM senior)',
-          'Solo funcionan en Barcelona, no en Madrid',
-          'Se recomienda no usarlos hasta tener al menos 10 años de experiencia'
+          'LinkedIn sigue sin verificar y queda 🔴',
+          'LinkedIn es ahora plataforma TOP con filtro nativo híbrido/remoto verificado 🟢',
+          'LinkedIn solo sirve para PM, no para FM',
+          'LinkedIn Premium es gratuito en España'
         ],
         correcta: 1,
-        explicacion: 'Los cazatalentos (Michael Page, Hays) son gratuitos para el candidato y concentran las mejores ofertas de dirección CM y FM antes de que lleguen a los portales abiertos. 🟢'
+        explicacion: 'La 2ª investigación verificó LinkedIn con fuente oficial 🟢: tiene filtro nativo de modalidad (Híbrido/Presencial/En remoto), alertas gratis y ~75 FM en Madrid. Pasa a ser plataforma TOP para tu perfil.'
       },
       {
-        pregunta: '¿Qué debes hacer con el dato del volumen de Facility Manager en Madrid?',
+        pregunta: '¿Dónde se concentran las ofertas de Facility Manager?',
         opciones: [
-          'Fiarte de él: está verificado con triple voto',
-          'Ignorarlo porque FM no es uno de tus puestos objetivo',
-          'Tratarlo como pendiente: no se cuantificó en esta investigación',
-          'Aplicarlo directamente porque viene de Michael Page'
+          'Solo en Construyendoempleo',
+          'En LinkedIn (~75 Madrid) y Michael Page (vertical FM dedicada)',
+          'En Tecnoempleo y CGATE',
+          'Solo en el COAATM'
         ],
-        correcta: 2,
-        explicacion: 'El volumen específico de FM en Madrid no se cuantificó en esta investigación. Queda como 🔴 pendiente. No significa que haya pocas ofertas: significa que falta medirlo.'
+        correcta: 1,
+        explicacion: 'FM se concentra en LinkedIn (~75 Madrid, snapshot 🟡) y Michael Page (vertical FM dedicada, 🟢). Empresas que publican FM: Centauro, Data4, Prosegur, Savills, MVGM, Clikalia.'
       },
       {
-        pregunta: '¿Cuál es la valoración de la fiabilidad de este informe según las conclusiones?',
+        pregunta: '¿Cuál es la valoración de la fiabilidad de este informe?',
         opciones: [
           'Baja: la mayoría de fuentes son secundarias',
-          'Alta: mayoría de fuentes son oficiales, triple verificación, 21 de 25 confirmados',
+          'Alta: fuentes oficiales, triple verificación, 2 investigaciones y trazabilidad total',
           'Media: solo se verificaron 5 datos con fuente primaria',
           'No hay valoración de fiabilidad en el informe'
         ],
         correcta: 1,
-        explicacion: 'La valoración es alta: mayoría de fuentes son oficiales/primarias, método de triple verificación adversarial, y 21 de los 25 datos verificados quedaron confirmados.'
+        explicacion: 'La valoración es alta: mayoría de fuentes son oficiales/primarias, método de triple verificación adversarial, 2 investigaciones, y 22 de los 25 datos de la 2ª investigación quedaron confirmados.'
       }
     ]
   }
