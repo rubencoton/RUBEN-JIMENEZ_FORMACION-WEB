@@ -1,5 +1,13 @@
 # CHANGELOG — RUBEN-JIMENEZ_FORMACION-WEB
 
+## [0.4.0] · 2026-05-29
+
+### Añadido
+- **Curso/informe "Plataformas de Empleo"** (`/cursos/plataformas-empleo`): dónde buscar trabajo de CM/FM/PM/Jefe de Producción en Madrid.
+- 9 módulos interactivos con **fuentes y semáforo de fiabilidad** (🟢🟡🔴), datos descartados marcados con honestidad, y módulo de Conclusiones (TFG).
+- Basado en investigación deep-research (21 datos confirmados / 4 descartados).
+- Nueva tarjeta en el catálogo (`lib/cursos.ts`). Build OK (114 páginas). Desplegado y verificado en vivo.
+
 ## [0.3.0] · 2026-05-28
 
 ### Añadido
