@@ -121,6 +121,17 @@ export const CURSOS: Curso[] = [
     duracion: '~22 h',
     nivel: 'Medio → Avanzado',
     destacado: true
+  },
+  {
+    slug: 'plataformas-empleo',
+    titulo: 'Plataformas de Empleo',
+    resumen: 'Dónde buscar trabajo de CM, FM, PM y Jefe de Producción en Madrid: portales, cazatalentos y colegios. Cada dato con fuente y nivel de fiabilidad.',
+    color: '#0277BD',
+    fondo: '#E1F5FE',
+    icono: '🧭',
+    modulos: 9,
+    duracion: '~2 h',
+    nivel: 'Guía práctica'
   }
 ];
 
